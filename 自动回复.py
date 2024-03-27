@@ -25,7 +25,7 @@ while running:
     while not we.Exists():
         if not running:  # 检查退出标志
             break  # 如果退出标志为False，退出循环
-        pass
+        time.sleep(1)  # 在每次循环中添加适当的延时，以减少CPU占用
 
     if not running:  # 检查退出标志
         break  # 如果退出标志为False，退出循环
@@ -47,4 +47,3 @@ while running:
             wx.TextControl(SubName=last_msg[:5]).RightClick()
 
     time.sleep(1)  # 在主循环中添加适当的延时，以减少CPU占用
-
